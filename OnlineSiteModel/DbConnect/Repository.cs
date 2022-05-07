@@ -69,22 +69,28 @@ namespace DbConnect
             }
         }
 
-        public bool ProductToDb(Product prod, ImageTable img)
+        public bool ProductToDb(Product prod)
         {
-            bool flag = false;
-            try
+            con.Products.Add(prod);
+            if (con.SaveChanges() > 0) {
+                return true;
+            }
+            else
             {
-                con.Products.Add(prod);
-                con.ImageTables.Add(img);
-                if (con.SaveChanges() > 0) {
-                    flag = true;
-                }
-                return flag;
+                return false;
             }
-            catch {
-                return flag;
+        }
+        public bool ImageToDb(ImageTable img)
+        {
+            con.ImageTables.Add(img);
+            if (con.SaveChanges() > 0)
+            {
+                return true;
             }
-          
+            else
+            {
+                return false;
+            }
         }
 
         public List<Category> GetCategories()

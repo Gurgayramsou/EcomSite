@@ -10,3 +10,15 @@ C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\D
 C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csproj.CopyComplete
 C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.dll
 C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.pdb
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\DbConnect.dll.config
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\DbConnect.dll
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\DbConnect.pdb
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.dll
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.SqlServer.dll
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.xml
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.SqlServer.xml
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csprojAssemblyReference.cache
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csproj.CoreCompileInputs.cache
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csproj.CopyComplete
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.dll
+D:\Ecom\EcomSite\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.pdb
