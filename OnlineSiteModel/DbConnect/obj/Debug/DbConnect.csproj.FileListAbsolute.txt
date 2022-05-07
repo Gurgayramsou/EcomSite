@@ -1,0 +1,12 @@
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\DbConnect.dll.config
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\DbConnect.dll
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\DbConnect.pdb
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.csproj.CopyComplete
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.dll
+C:\Users\ADMIN\source\repos\RealProjOnline\OnlineSiteModel\DbConnect\obj\Debug\DbConnect.pdb
