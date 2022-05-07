@@ -34,8 +34,18 @@ namespace OnlineSiteModel.Controllers
                 stock = stock,
                 Description = desc,
             };
+            bool productAdded = false;
+            if (rep.ProductToDb(prod))
+            {
+                productAdded = false;
+            }
+            else
+            {
+                productAdded = false;
+            }
 
-            Image img = Image.FromFile(@"C:\Users\ADMIN\Downloads\iimage\OIP.jfif");
+            string path = "C:\\Users\\ADMIN\\Downloads\\iimage\\" + ImgPath;
+            Image img = Image.FromFile(path);
             var Img = new DbConnect.ImageTable();
             Img.image_name = pname;
             Img.ProductID = rep.GetProductId(pname);
@@ -43,15 +53,21 @@ namespace OnlineSiteModel.Controllers
                 img.Save(ms, img.RawFormat);
                 Img.image = ms.ToArray();
             }
-
-            if (rep.ProductToDb(prod, Img))
+            bool imageAdded = false;
+            if (rep.ImageToDb(Img))
             {
+                imageAdded = false;
+            }
+            else
+            {
+                imageAdded = false;
+            }
+            ViewBag.status = false;
+            if (productAdded && imageAdded) {
                 ViewBag.status = true;
             }
-            else {
-                ViewBag.status = false;
-            }
-                return View();
+
+            return View();
         }
     }
 }
