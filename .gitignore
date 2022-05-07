@@ -1,3 +1,7 @@
-OnlineSiteModel/.vs/OnlineSiteModel/
-
-OnlineSiteModel/obj/Debug/
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
+*/.vs/*/v15/
+*/.vs/*/v15/.suo
+*/obj/Debug/build.force
