@@ -3,18 +3,18 @@
 @{
     ViewBag.Title = "admin";
 }
-@if (ViewBag.status != null)
+@if (TempData["status"] != null)
 {
     if (Convert.ToBoolean(TempData["status"]))
     {
         <div class="alert alert-success pt-0 w-100 text-center alertHeightModify" role="alert">
-            Successfully removed from cart!
+            Successfully added!
         </div>
     }
     else
     {
         <div class="alert alert-danger pt-0 w-100 text-center alertHeightModify" role="alert">
-            oops!could not remove.
+            oops!could not add.
         </div>
     }
 }

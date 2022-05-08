@@ -172,6 +172,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AddUserController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CrudManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -254,6 +255,11 @@
     <Content Include="Views\Register\AccountDetail.cshtml" />
     <Content Include="Views\Admin\_adminLayout.cshtml" />
     <Content Include="Views\Admin\_ViewStart.cshtml" />
+    <Content Include="Views\CrudManager\ProdCrud.cshtml" />
+    <Content Include="Views\CrudManager\_adminLayout.cshtml" />
+    <Content Include="Views\CrudManager\_ViewStart.cshtml" />
+    <Content Include="Views\CrudManager\CatCrud.cshtml" />
+    <Content Include="Views\Admin\ProductDelete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

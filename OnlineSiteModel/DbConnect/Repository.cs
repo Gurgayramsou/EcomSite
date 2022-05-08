@@ -93,6 +93,18 @@ namespace DbConnect
             }
         }
 
+        public bool ProdDelete(int pid)
+        {
+            con.Products.Remove(GetProduct(pid));
+            if (con.SaveChanges() > 0)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
         public List<Category> GetCategories()
         {
             return con.Categories.ToList();
