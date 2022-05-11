@@ -20,7 +20,21 @@ namespace OnlineSiteModel.Controllers
         {
             List< Models.Products > ProdList = new List< Models.Products >();
             int i = 0;
-            foreach(var prod in rep.GetProdAll()) {
+            List<ImageTable> prodImgs = rep.GetImageData();
+            List<DbConnect.Product> Prods;
+            if (TempData["Prods"] != null)
+            {
+                 Prods =(List<DbConnect.Product>) TempData["Prods"];
+                List<DbConnect.ImageTable> imgs = new List<ImageTable>();
+                foreach (var ii in Prods) {
+                    imgs.Add(rep.GetProductIamgeData(ii.ProductID));
+                }
+                prodImgs = imgs;
+            }
+            else {
+                 Prods = rep.GetProdAll();
+            }
+            foreach(var prod in Prods) {
                 var tempProd = Helper.ProdConverter(prod);
                 if (i>= PageId*10 && i < (PageId + 1) * 10)
                 {
@@ -30,7 +44,8 @@ namespace OnlineSiteModel.Controllers
             }
             int j = 0;
             var ls = new List<string>();
-            foreach (var img in rep.GetImageData()) {
+            
+            foreach (var img in prodImgs) {
                 string url = Helper.UrlMaker(img);
                 if (j >= PageId*10 && j < (PageId + 1) * 10)
                 {
@@ -129,6 +144,14 @@ namespace OnlineSiteModel.Controllers
         public ActionResult FiterResult() {
             return View();
         }
+        public ActionResult Filter(string name)
+        {
+            var prods = rep.GetProdByName(name);
+            TempData["Prods"] = prods;
+            return Redirect("/Home/Index");
+
+        }
+        
     }
     public class Helper
     {
@@ -160,6 +183,7 @@ namespace OnlineSiteModel.Controllers
                 return 0;
             }
         }
+        
      
     }
 }

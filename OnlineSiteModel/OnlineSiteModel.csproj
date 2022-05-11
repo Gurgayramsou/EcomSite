@@ -203,12 +203,13 @@
     <Content Include="Images\file-ppt.svg" />
     <Content Include="Images\heart-fill.svg" />
     <Content Include="Images\heart.svg" />
+    <Content Include="Images\slide4.png" />
+    <Content Include="Images\slide1.png" />
+    <Content Include="Images\slide3.png" />
+    <Content Include="Images\slide2.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\navigation-347-836751.jpg" />
     <Content Include="Images\person-circle.svg" />
-    <Content Include="Images\slide1.jpg" />
-    <Content Include="Images\slide2.jpg" />
-    <Content Include="Images\slide3.jpg" />
     <Content Include="Images\star-fill.svg" />
     <Content Include="Images\star-half.svg" />
     <Content Include="Images\star.svg" />
