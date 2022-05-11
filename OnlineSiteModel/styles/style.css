@@ -3,8 +3,40 @@
     padding: 0;
 }
 
-.carousel-inner .carousel-item {
-    height: 300px;
+
+.carousel-item img {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 30%;
+}
+@media screen and (max-width:576px) {
+    .carousel-inner .carousel-item {
+        height: 100px;
+    }
+
+    .carousel-item img {
+        min-height: 30%;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .carousel-inner .carousel-item {
+        height: 200px;
+    }
+    .carousel-item img {
+        min-height: 50%;
+    }
+}
+@media screen and (min-width:768px) {
+    .carousel-inner .carousel-item {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        min-height: 40%;
+    }
 }
 
 #cartIcon {
@@ -21,12 +53,7 @@
         font-size: 1.5em;
     }
 
-    .carousel-item img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-height: 30%;
-    }
+   
 .Profile {
    position:absolute;
    right:20px;

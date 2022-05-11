@@ -7,13 +7,16 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="~/Images/slide1.jpg" class="d-block w-100" alt="...">
+            <img src="~/Images/slide1.png" class="d-block w-100 img-responsive" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="~/Images/slide2.jpg" class="d-block w-100" alt="...">
+            <img src="~/Images/slide2.png" class="d-block w-100 img-responsive" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="~/Images/slide3.jpg" class="d-block w-100" alt="...">
+            <img src="~/Images/slide3.png" class="d-block w-100 img-responsive" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/Images/slide4.png" class="d-block w-100 img-responsive" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -25,7 +28,7 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-<div class="container-fluid p-3">
+<div class="container-fluid p-3 mt-0">
     <div class="row">
         <div class="col-sm-3">
             <button class="btn btn-primary filterBtn mr-5" data-bs-toggle="collapse" href="#filterBar" role="button" aria-expanded="false" aria-controls="filterCollapse">
@@ -35,9 +38,9 @@
                 <span class="fs-4 fw-bold">filter</span>
             </button>
         </div>
-        <form class="col-sm-5 form-group-sm mt-2" role="form">
+        <form class="col-sm-5 form-group-sm mt-2" role="form" action="/Home/Filter">
             <div class="input-group">
-                <input class="form-control p-2 w-50 " type="text" />
+                <input class="form-control p-2 w-50 " type="text" name="name" />
                 <button type="submit" class="btn-sm btn-success">search</button>
             </div>
         </form>
@@ -48,15 +51,15 @@
         <div class="col-sm-3 filterBar text-center p-3" id="filterBar">
             <form action="" method="post" role="form" class="form-horizontal">
                 <div class="form-group-sm mb-3">
-                    <label for="pname" class="control-label">Product Name</label>
+                    <label for="name" class="control-label">Product Name</label>
                     <input type="text" class="form-control w-75 mx-auto" placeholder="Exa: MI lite" id="pname" name="pname" />
                 </div>
                 <div class="form-group-sm mb-3">
-                    <label for="pname" class="control-label">Select Category</label>
+                    <label for="category" class="control-label">Select Category</label>
                     <select class="form-select form-select-lg mb-3 w-75 mx-auto" aria-label=".form-select-lg example" name="category" id="category">
                         @foreach (var cat in ViewBag.CategoryList)
                         {
-                            <option selected>@cat.CategoryName.ToString()</option>
+                            <option value=@cat.CategoryId>@cat.CategoryName.ToString()</option>
                         }
                     </select>
                 </div>
@@ -66,8 +69,8 @@
                     <output>1</output>
                 </div>
                 <div class="form-group-sm mb-3">
-                    <input type="checkbox" class="form-checkbox" />
-                    <label for="priceRange" class="control-label">Availability check!</label>
+                    <input type="checkbox" class="form-checkbox" name="avail" />
+                    <label for="avail" class="control-label">Availability check!</label>
                 </div>
                 <button type="submit" class="btn btn-success">Apply</button>
             </form>

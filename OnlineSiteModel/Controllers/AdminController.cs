@@ -37,11 +37,7 @@ namespace OnlineSiteModel.Controllers
             bool productAdded = false;
             if (rep.ProductToDb(prod))
             {
-                productAdded = false;
-            }
-            else
-            {
-                productAdded = false;
+                productAdded = true;
             }
 
             string path = "C:\\Users\\ADMIN\\Downloads\\iimage\\" + ImgPath;
@@ -56,17 +52,31 @@ namespace OnlineSiteModel.Controllers
             bool imageAdded = false;
             if (rep.ImageToDb(Img))
             {
-                imageAdded = false;
-            }
-            else
-            {
-                imageAdded = false;
-            }
-            ViewBag.status = false;
-            if (productAdded && imageAdded) {
-                ViewBag.status = true;
+                imageAdded = true;
             }
 
+            ViewBag.status = false;
+            if (productAdded && imageAdded) {
+                TempData["status"] = true;
+            }
+
+            return View();
+        }
+
+        public ActionResult ProductDelete()
+        {
+            ViewBag.Products = rep.GetProdAll();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ProductDelete(int pid)
+        {
+            TempData["status"] = false;
+            ViewBag.Products = rep.GetProdAll();
+            if (rep.ProdDelete(pid)) {
+                TempData["status"] = true;
+            }
             return View();
         }
     }
